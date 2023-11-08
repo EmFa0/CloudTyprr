@@ -1,2 +1,1 @@
-# CloudTyprr
-optionální deskripce
+rýdmí
