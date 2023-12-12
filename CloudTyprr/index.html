@@ -27,7 +27,7 @@
   -ms-flex-align: center;
   align-items: center;
   justify-content: center;
-  background: #CCD1D9;
+  background: #4170F4;
 }
 
 .button {
@@ -35,9 +35,9 @@
   border-radius: 3px;
   box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
   line-height: 1.25;
-  background: #4170F4;
+  background: #c7c7c7;
   text-decoration: none;
-  color: white;
+  color: rgb(71, 71, 71);
   font-size: 16px;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -62,7 +62,7 @@
   &:focus,
   &:hover {
       background: darken(#FC6E51,7%);
-      color: #CCD1D9;
+      color: #a1a1a1;
   }
   &:active {
     &:after {
@@ -74,6 +74,18 @@
 
 .class {
     background: rgba(0,0,0,0.5);
+}
+
+.nadpis {
+    color: rgb(240, 240, 240);
+}
+
+.fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1; /* zajistí, aby byl obrázek pod obsahem stránky */
 }
 
 
@@ -101,9 +113,9 @@
                       <a href="./index.html"><img src="./images/logo.png" style="margin-left: 50px; height: 50px;"></a>
                   </td>
                   <td style="text-align: right;">
-                      <a href="./index.html#produktoveklice" style="font-family: 'Lato', sans-serif; margin-left: 30px; text-decoration: none; color: rgb(51, 51, 51); background-size: 300px 100px; ">PRODUKTY</a>
-                      <a href="./kontakt.html" style="font-family: 'Lato', sans-serif; margin-left: 30px; text-decoration: none; color: rgb(51, 51, 51); background-size: 300px 100px;">KOKTAKT</a>
-                      <a href="./o_nas.html" style="font-family: 'Lato', sans-serif; margin-left: 30px; margin-right: 70px; text-decoration: none; color: rgb(51, 51, 51); background-size: 300px 100px;">ABOUT</a>
+                      <a href="./index.html#produktoveklice" style="font-family: 'Lato', sans-serif; margin-left: 30px; text-decoration: none; color: rgb(216, 216, 216); background-size: 300px 100px; ">PRODUKTY</a>
+                      <a href="./kontakt.html" style="font-family: 'Lato', sans-serif; margin-left: 30px; text-decoration: none; color: rgb(216, 216, 216); background-size: 300px 100px;">KOKTAKT</a>
+                      <a href="./o_nas.html" style="font-family: 'Lato', sans-serif; margin-left: 30px; margin-right: 70px; text-decoration: none; color: rgb(216, 216, 216); background-size: 300px 100px;">ABOUT</a>
                   </td>
               </th>
           </tr>
@@ -124,15 +136,17 @@
 
 
     <div id="content-container" style="ssalign-items: center; justify-content: center;">
-        <h1 style="font-family: 'Lato', sans-serif; margin-top: 190px; font-size: 50px;">CloudTyprr</h1>
+        <h1 style="font-family: 'Lato', sans-serif; margin-top: 190px; font-size: 50px;" class="nadpis">CloudTyprr</h1>
         <br>
-        <b style="font-family: 'normalnifont', sans-serif;">Meteorological cloud classification quiz</b>
+        <b style="font-family: 'normalnifont', sans-serif; color: rgb(216, 213, 213);">Meteorological cloud classification game</b>
         <br>
         <p style="margin-top: 60px;"></p>
     
 
-      <a href="#" class="button" id="button" style="font-family: 'Lato', sans-serif; margin-top: 0px;">Start</a>
+      <a href="#" class="button" id="button" style="font-family: 'Lato', sans-serif; margin-top: 0px;" class="nadpis">Start</a>
 </div>
+
+
 
 
 
@@ -143,7 +157,7 @@
 
 
 </table>
-
+<img src="./images/overlay.png" class="fixed-bottom" style="height: 15%; margin-left: auto;">
 
 </body>
 </html>
