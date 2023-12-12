@@ -1,18 +1,149 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Kvíz</title>
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
-  <h1>Kvíz</h1>
-  <div id="question"></div>
-  <img src="" id="image" alt="Obrazek">
-  <input type="text" id="answerInput">
-  <button onclick="checkAnswer()" id="submitBtn">Odeslat</button>
-  <p id="result"></p>
-  <button style="display: none;" onclick="nextQuestion()" id="nextButton">Dále</button>
 
-  <script src="script.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CloudTyprr</title>
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <style>
+        body {
+            background-color: rgb(255, 255, 255);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 0;
+        }
+        #content-container {
+            text-align: center;
+        }
+
+        body {
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  justify-content: center;
+  background: #CCD1D9;
+}
+
+.button {
+  padding: 16px 42px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+  line-height: 1.25;
+  background: #4170F4;
+  text-decoration: none;
+  color: white;
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color .6s ease;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    transform-style: flat;
+    transform: translate3d(-50%,-50%,0);
+    background: rgba(white,.1);
+    border-radius: 100%;
+    transition: width .3s ease, height .3s ease;
+  }
+  &:focus,
+  &:hover {
+      background: darken(#FC6E51,7%);
+      color: #CCD1D9;
+  }
+  &:active {
+    &:after {
+      width: 300px;
+      height: 300px;
+    }
+  }
+}
+
+.class {
+    background: rgba(0,0,0,0.5);
+}
+
+
+        
+
+
+
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Font2:wght@400;900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+  <body>
+      <table class="background" style="border-radius: 10px; width: 97%; height: 90px; background-color: #0; margin-top: 30px; margin-left: 0; top: 0" border="0">
+          <tr>
+              <th style="height: 40%;">
+                  <td style="text-allign: right;">
+                      <a href="./index.html"><img src="./images/logo.png" style="margin-left: 50px; height: 50px;"></a>
+                  </td>
+                  <td style="text-align: right;">
+                      <a href="./index.html#produktoveklice" style="font-family: 'Lato', sans-serif; margin-left: 30px; text-decoration: none; color: rgb(51, 51, 51); background-size: 300px 100px; ">PRODUKTY</a>
+                      <a href="./kontakt.html" style="font-family: 'Lato', sans-serif; margin-left: 30px; text-decoration: none; color: rgb(51, 51, 51); background-size: 300px 100px;">KOKTAKT</a>
+                      <a href="./o_nas.html" style="font-family: 'Lato', sans-serif; margin-left: 30px; margin-right: 70px; text-decoration: none; color: rgb(51, 51, 51); background-size: 300px 100px;">ABOUT</a>
+                  </td>
+              </th>
+          </tr>
+          
+      </table>
+  </body>
+  
+      <p style="margin-top: 20px;"></p>
+  </table>
+    
+        <p style="margin-top: 20px;"></p>
+
+    </table>
+
+    
+
+
+
+
+    <div id="content-container" style="ssalign-items: center; justify-content: center;">
+        <h1 style="font-family: 'Lato', sans-serif; margin-top: 190px; font-size: 50px;">CloudTyprr</h1>
+        <br>
+        <b style="font-family: 'normalnifont', sans-serif;">Meteorological cloud classification quiz</b>
+        <br>
+        <p style="margin-top: 60px;"></p>
+    
+
+      <a href="#" class="button" id="button" style="font-family: 'Lato', sans-serif; margin-top: 0px;">Start</a>
+</div>
+
+
+
+
+
+
+</body>
+
+
+</table>
+
+
 </body>
 </html>

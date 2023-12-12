@@ -11,7 +11,7 @@ let answers = [
 ];
 
 let images = [
-  "prvni.png",
+  "./images/1.png",
   "druhy.png",
   "treti.png"
 ];
@@ -27,20 +27,21 @@ function displayQuestion() {
 
 
 function checkAnswer() {
-  let userAnswer = document.getElementById("answerInput").value;
+  let userAnswer = document.getElementById("answerInput").value.toLowerCase();
   let resultText = document.getElementById("result");
   let submitBtn = document.getElementById("submitBtn");
   let nextButton = document.getElementById("nextButton");
 
-  if (userAnswer.toLowerCase() === answers[currentQuestion].toLowerCase()) {
+  if (userAnswer === answers[currentQuestion].toLowerCase()) {
     resultText.innerHTML = "Correct!";
     score++;
+    nextButton.style.display = "block";
+    submitBtn.disabled = true;
   } else {
-    resultText.innerHTML = "That's not correct!";
+    resultText.innerHTML = "That's not correct! Správná odpověď je: " + answers[currentQuestion];
+    nextButton.style.display = "block";
+    submitBtn.disabled = true;
   }
-
-  nextButton.style.display = "block";
-  submitBtn.disabled = true; // Deaktivovat tlačítko "Odeslat"
 }
 
 function nextQuestion() {
@@ -64,4 +65,18 @@ function nextQuestion() {
   }
 }
 
+
 displayQuestion();
+
+
+
+
+
+let button = document.getElementById("button");
+
+button.addEventListener('mousemove', (e) => {
+    x = e.offsetX;
+    y = e.offsetY;
+    button.style.setProperty('--mouse-x', x + "px");
+    button.style.setProperty('--mouse-y', y + "px");
+});
