@@ -110,7 +110,7 @@
           <tr>
               <th style="height: 40%;">
                   <td style="text-allign: right;">
-                      <a href="./index.html"><img src="./images/logo.png" style="margin-left: 50px; height: 50px;"></a>
+                      <a href="../index.html"><img src="./images/logo.png" style="margin-left: 50px; height: 50px;"></a>
                   </td>
                   <td style="text-align: right;">
                       <a href="./index.html#produktoveklice" style="font-family: 'Lato', sans-serif; margin-left: 30px; text-decoration: none; color: rgb(216, 216, 216); background-size: 300px 100px; ">PRODUKTY</a>
@@ -136,15 +136,33 @@
 
 
     <div id="content-container" style="ssalign-items: center; justify-content: center;">
-        <h1 style="font-family: 'Lato', sans-serif; margin-top: 190px; font-size: 50px;" class="nadpis">CloudTyprr</h1>
+        <h1 style="font-family: 'Lato', sans-serif; margin-top: 190px; font-size: 50px;" class="nadpis">Easy cloud classification</h1>
         <br>
-        <b style="font-family: 'normalnifont', sans-serif; color: rgb(216, 213, 213);">Meteorological cloud classification game</b>
+        <b style="font-family: 'normalnifont', sans-serif; color: rgb(216, 213, 213);">Classify only cloud types on a picture (no species and varieties)</b>
+        <p style="margin-bottom: 7px;"></p>
+        <b style="font-family: 'normalnifont', sans-serif; color: rgb(216, 213, 213);">Only clearly recognizable clouds will be on the photos</b>
         <br>
         <p style="margin-top: 60px;"></p>
     
 
-      <a href="./selectmode/index.html" class="button" id="button" style="font-family: 'Lato', sans-serif; margin-top: 0px;" class="nadpis">Start</a>
+      <a href="./selectmode/index.html" class="button" id="button" style="font-family: 'Lato', sans-serif; margin-top: 0px;" class="nadpis">Begin</a>
+
+
+
+
+
+      
+      <h1>Kvíz</h1>
+      <div id="question"></div>
+      <img src="" id="image" alt="Obrazek">
+      <input type="text" id="answerInput">
+      <button onclick="checkAnswer()" id="submitBtn">Odeslat</button>
+      <p id="result"></p>
+      <button style="display: none;" onclick="nextQuestion()" id="nextButton">Dále</button>
+    
+      <script src="script.js"></script>
 </div>
+
 
 
 
