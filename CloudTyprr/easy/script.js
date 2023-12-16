@@ -1,18 +1,18 @@
 let questions = [
-  "První otázka: Co je 1+1?",
-  "Druhá otázka: Jaké je hlavní město České republiky?",
+  "Question 1 / 30",
+  "Question 2 / 30",
   "Třetí otázka: Kolik je 2*3?"
 ];
 
 let answers = [
-  "2",
-  "Praha",
+  "Cirrus",
+  "Nimbostratus",
   "6"
 ];
 
 let images = [
-  "./images/1.png",
-  "druhy.png",
+  "./images/test.png",
+  "./images/druhy.png",
   "treti.png"
 ];
 
@@ -22,7 +22,13 @@ let score = 0;
 function displayQuestion() {
   document.getElementById("question").innerHTML = questions[currentQuestion];
   document.getElementById("image").src = images[currentQuestion];
+  let submitBtn = document.getElementById("submitBtn");
+  let nextButton = document.getElementById("nextButton");
+
+  submitBtn.style.display = "block"; // Zajištění zobrazení tlačítka "Check"
+  nextButton.style.display = "none"; // Skrytí tlačítka "Next"
 }
+
 
 
 
@@ -43,6 +49,23 @@ function checkAnswer() {
     submitBtn.disabled = true;
   }
 }
+
+
+
+function toggleButton() {
+  let submitBtn = document.getElementById("submitBtn");
+  let nextButton = document.getElementById("nextButton");
+
+  if (submitBtn.style.display !== "none") {
+    submitBtn.style.display = "none";
+    nextButton.style.display = "block";
+  } else {
+    submitBtn.style.display = "block";
+    nextButton.style.display = "none";
+  }
+}
+
+
 
 function nextQuestion() {
   let submitBtn = document.getElementById("submitBtn");
