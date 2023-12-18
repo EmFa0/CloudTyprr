@@ -108,6 +108,37 @@
 .dite { display: inline-block; }
 
 
+.buttonhome {
+  padding: 16px 42px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 12px -2px rgba(0,0,0,0.5);
+  line-height: 1.25;
+  background: #c7c7c7;
+  text-decoration: none;
+  color: rgb(71, 71, 71);
+  font-size: 16px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  position: relative;
+  transition: background-color .6s ease;
+  overflow: hidden;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 50%;
+    left: 50%;
+    top: var(--mouse-y);
+    left: var(--mouse-x);
+    transform-style: flat;
+    transform: translate3d(-50%,-50%,0);
+    background: rgba(white,.1);
+    border-radius: 100%;
+    transition: width .3s ease, height .3s ease;
+  }
+
+
 
 
 
@@ -156,12 +187,12 @@
 
     <div id="content-container" style="ssalign-items: center; justify-content: center;">
 
-        <h3 style="font-family: 'Lato', sans-serif; margin-top: 20px; font-size: 40px;" class="nadpis">What cloud is this?</h3>
+        <h3 id="whatcloud" style="font-family: 'Lato', sans-serif; margin-top: 20px; font-size: 40px;" class="nadpis">What cloud is this?</h3>
         <p style="margin-top: 20px;"></p>
       <b id="question" style="font-family: 'normalnifont', sans-serif; color: rgb(216, 213, 213);"></b>
       <br>
       <p style="margin-bottom: 50px;"></p>
-      <img src="" id="image" alt="Obrazek" class="image" style="height: 400px;">
+      <img src="" id="image" alt="Picture not loaded. Check internet connection" class="image" style="height: 400px;">
       <br>
       <p style="margin-top: 40px;"></p>
       
@@ -170,21 +201,71 @@
 
       <div style="display: flex; align-items: center; justify-content: center;">
 
-        <input type="text" id="answerInput" style="margin-right: 10px;">
-        <a onclick="checkAnswer(); toggleButton()" class="button" style="font-family: 'Lato', sans-serif; cursor: pointer;" id="submitBtn">Check</a>
+        <select id="answerInput" style="margin-right: 15px;">
+            <option value="0">Stratus</option>
+            <option value="1">Cumulus</option>
+            <option value="2">Stratocumulus</option>
+            <option value="3">Altostratus</option>
+            <option value="4">Altocumulus</option>
+            <option value="5">Nimbostratus</option>
+            <option value="6">Cirrus</option>
+            <option value="7">Cirrostratus</option>
+            <option value="8">Cirrocumulus</option>
+            <option value="9">Cumulonimbus</option>
+        </select>
+        
+        <a onclick="checkAndProceed()" class="button" style="font-family: 'Lato', sans-serif; cursor: pointer;" id="submitBtn">Check</a>
         <a class="button" style="display: none; margin-left: 0px; font-family: 'Lato', sans-serif; cursor: pointer;" onclick="nextQuestion()" id="nextButton">Next</a>
+        
+        <p style="margin-top: 10px;"></p>
+        <b id="result" style="font-family: 'normalnifont', sans-serif; color: rgb(216, 213, 213); margin-top: 20px;"></b>
+        <br>
+
 
     </div>
+    <div id="resultContainer">
+        <p style="margin-top: 10px;"></p>
+    </div>
+
+    <div id="scoreContainer" style="display: none; font-size: 24px; font-weight: bold; color: white;">
+        Score: <span id="finalScore">0</span>/<span id="totalQuestions">0</span>
+      </div>
     
 
-
-      <br>
-      <p style="margin-top: 10px;"></p>
-      <b id="result" style="font-family: 'normalnifont', sans-serif; color: rgb(216, 213, 213); margin-top: 20px;"></b>
-      
-    
       <script src="script.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <p style="margin-top: 0px;"></p>
+
+
+
+
+
 </div>
+
+
+
+<div id="scorediv" style="text-align: center; margin-bottom: 300px;">
+            <h3 id="whatcloud" style="font-family: 'Lato', sans-serif; font-size: 40px; color: #ffffff;" class="nadpis">Easy cloud identification</h3>
+    <h3 id="whatcloud" style="font-family: 'Lato', sans-serif; margin-top: 80px; font-size: 40px; color: #f1f1f1;" class="nadpis">Score</h3>
+    <b id="score" style="font-family: 'normalnifont', sans-serif; color: rgb(202, 201, 201); font-size: 22px;"></b>
+    <br>
+    <p style="margin-bottom: 70px;"></p>
+    <a href="../index.html" class="buttonhome" id="buttonhome" style="font-family: 'Lato', sans-serif; margin-top: 30px;" class="nadpis">Home</a>
+</div>
+
 
 
 
