@@ -1,0 +1,23 @@
+/* Obsah souboru quiz.css */
+
+/* Styly pro text otázek */
+#question {
+    font-size: 20px;
+    font-weight: bold;
+    /* Další vlastnosti stylu pro text otázek */
+  }
+  
+  /* Styly pro obrázky */
+  #image {
+    width: 200px;
+    height: 200px;
+    /* Další vlastnosti stylu pro obrázky */
+  }
+  
+
+  
+
+
+
+
+
